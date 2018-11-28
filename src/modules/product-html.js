@@ -17,7 +17,7 @@ let _makeHtml = ({
 	else{
 		$product.append($(`<span class="product-price">`).text(price));
 	}
-	$product.append($(`<img src="../image/basket.png" alt="Buy" class="product-buy">`));
+	$product.append($(`<img src="image/basket.png" alt="Buy" class="product-buy">`));
 	return $product;
 };
 

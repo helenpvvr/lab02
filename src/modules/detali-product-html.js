@@ -21,7 +21,7 @@ let _makeHtml = ({
 		$detali_info.append($(`<span class="detali-product-price">`).text(price));
 	}
 	$detali_info.append($(`<span class="detali-product-description">`).text(description));
-	$detali_info.append($(`<img src="../image/basket.png" alt="Buy" class="detali-product-buy">`));
+	$detali_info.append($(`<img src="image/basket.png" alt="Buy" class="detali-product-buy">`));
 
 	$detali_product.append($detali_image);
 	$detali_product.append($detali_info);
