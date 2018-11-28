@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./css/main.css">
+	<title>Інтернет-магазин "SmartCat"</title>
+</head>
+<body>
+	<!-- Header -->
+	<header class="jumbotron">
+		<div class="header">
+			<img src="../image/logo.png" class="logoimg">
+			<h1 class="text-center store-name">Electronics store "SmartCat"</h1>	
+		</div>
+	</header>
+
+	<!-- Information about store -->
+	<div class="container aboutUs">
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-default">
+	    		<div class="panel-heading">
+	    			<span class="panel-title">
+	        			<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Більше про нас</a>
+	    			</span>
+	    		</div>
+	    		<div id="collapse1" class="panel-collapse collapse in">
+	    			<div class="panel-body">"SmartCat" - інтернет-магазин електроніки. Тут Ви можете вибрати товар на будь-який смак та замовити його. Для замовлення потрібно заповнити форму даними та натиснути кнопку "Замовити"
+	    			</div>
+	    		</div>
+	    	</div>
+		</div> 
+	</div>
+	
+
+	<div class="container row">
+		<div class="col-md-3">
+			<!-- Basket with goods -->
+			<div class="container basket-place">
+				<button class="btn btn-default" data-toggle="collapse" data-target="#basket-contain-block"> <img src="../image/basket.png" class="basketimg" alt="basket" />Кошик </button>
+				<div id="basket-contain-block" class="collapse">
+					<div id="basket-elements"></div>
+					<button class="btn" id="clear-basket">Очистити кошик</button>
+					<!-- Form to make order -->
+					<div class="container form-place">
+						<button class="btn btn-default" data-toggle="collapse" data-target="#form-block"> <img src="../image/order.png" class="orderbuttonimg" alt="order" /> Замовлення </button>
+						<div id="form-block" class="collapse">
+							<div class="container" id="form">
+								<span class="form-header">Зробіть замовлення. Заповність усі поля коректно</span>
+								<form class="order-form">
+									<div class="form-group">
+										<label for="usr">Ім'я:</label>
+										<input type="text" class="form-control" id="usr" placeholder="Name">
+									</div>
+									<div class="form-group">
+										<label for="phone-numb">Номер телефону:</label>
+										<input type="text" class="form-control bfh-phone" id="phone-numb" value="+380">
+									</div>
+									<div class="form-group">
+		    							<label for="email">Email:</label>
+										<input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+		    						</div>
+								</form>
+							</div>
+							<button class="btn" id="send-info"> 
+								<img src="../image/makeorder.png" class="orderbuttonimg" alt="makeorder" /> Замовити 
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+
+			<!-- Category of goods -->
+			<div class="container row">
+				<div class="col-md-12 categoryList-place">
+					<div class="allProduct-grid">
+						<li class="list-group-item category active" data-category-id="all"> All
+					</div>
+					<div class="categoryList-grid"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Place for goods -->
+		<div class="col-md-9 product-place">
+			<div class="row product-grid"></div>
+			<div class="detail-product-grid"></div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="page-footer font-small blue">
+		<div class="footer-copyright text-center py-3">© 2018 developed by  
+			<a href="mailto:olena.pyvovar1234@gmail.com">Olena Pyvovar</a>
+		</div>
+	</footer>
+
+	<script src="./js/main.js"></script>
+</body>
+</html>
