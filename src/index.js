@@ -22,7 +22,7 @@ let _makeDetaliProduct = require('./modules/detali-product-html');
 
 /*all products*/
 jQuery.ajax({
-	url: 'http://nit.tron.net.ua/api/product/list',
+	url: 'https://nit.tron.net.ua/api/product/list',
 	method: 'get',
 	dataType: 'json',
 	success: function(json){
@@ -41,7 +41,7 @@ jQuery.ajax({
 
 /*all category of products*/
 jQuery.ajax({
-	url: 'http://nit.tron.net.ua/api/category/list',
+	url: 'https://nit.tron.net.ua/api/category/list',
 	method: 'get',
 	dataType: 'json',
 	success: function(json){
@@ -72,9 +72,9 @@ $(document).on('click', '.category', function(){
 	var urlstr = '';
 
 	if(id == 'all')
-		urlstr = 'http://nit.tron.net.ua/api/product/list';
+		urlstr = 'https://nit.tron.net.ua/api/product/list';
 	else
-		urlstr = 'http://nit.tron.net.ua/api/product/list/category/' + id;
+		urlstr = 'https://nit.tron.net.ua/api/product/list/category/' + id;
 
 	jQuery.ajax({
     	url: urlstr,
@@ -100,7 +100,7 @@ $(document).on('click', '.product-image', function(){
 	$('div.detail-product-grid').empty();//очистити блок
 
 	jQuery.ajax({
-    	url: 'http://nit.tron.net.ua/api/product/' + id,
+    	url: 'https://nit.tron.net.ua/api/product/' + id,
     	method: 'get',
     	dataType: 'json',
     	success: function(json){
