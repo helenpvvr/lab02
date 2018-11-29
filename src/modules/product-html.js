@@ -7,7 +7,7 @@ let _makeHtml = ({
 	price,
 	special_price,
 }) => {
-	let $product = $(`<div class="card col-xs-12 col-sm-12 col-md-4 product-div" data-product-id="${id}">`);
+	let $product = $(`<div class="card col-12 col-sm-12 col-md-4 product-div" data-product-id="${id}">`);
 	$product.append($(`<img src="${image_url}" alt="${name}" class="img-fluid product-image">`));
 	$product.append($(`<span class="product-title">`).text(name));
 	if(special_price != null){
