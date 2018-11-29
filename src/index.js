@@ -90,15 +90,8 @@ $(document).on('click', '.category', function(){
   
 });
 
-/*to click on img to display detali informarion about product*/
-$(document).on('click', '.product-image', function(){
-	var $this = $(this);
-	var id = $this.closest('.product-div').data('product-id');
-	displayDetaliInform(id);
-});
-
-/*to click on title to display detali informarion about product*/
-$(document).on('click', '.product-title', function(){
+/*to click on img or title to display detali informarion about product*/
+$(document).on('click', '.product-title, .product-image', function(){
 	var $this = $(this);
 	var id = $this.closest('.product-div').data('product-id');
 	displayDetaliInform(id);
