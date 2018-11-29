@@ -90,11 +90,22 @@ $(document).on('click', '.category', function(){
   
 });
 
-/*to display detali informarion about product*/
+/*to click on img to display detali informarion about product*/
 $(document).on('click', '.product-image', function(){
 	var $this = $(this);
-
 	var id = $this.closest('.product-div').data('product-id');
+	displayDetaliInform(id);
+});
+
+/*to click on title to display detali informarion about product*/
+$(document).on('click', '.product-title', function(){
+	var $this = $(this);
+	var id = $this.closest('.product-div').data('product-id');
+	displayDetaliInform(id);
+});
+
+/*to display detali informarion about product*/
+function displayDetaliInform(id){
 	console.log(id);
 	$('div.product-grid').empty();//очистити блок
 	$('div.detail-product-grid').empty();//очистити блок
@@ -110,8 +121,7 @@ $(document).on('click', '.product-image', function(){
     		alert("An error occured: " + xhr.status + " " + xhr.statusText);
     	},
   	});
-  
-});
+};
 
 /*clear basket*/
 $(document).on('click', '#clear-basket', function(){
@@ -132,21 +142,15 @@ $(document).on('click', '.product-buy', function(){
 	var price = $this.closest('.product-div').children('.product-price').text();
 	var special_price = $this.closest('.product-div').children('.product-special-price').text();
 
-	console.log("This element: ");
-	console.log("name: " + name);
-	console.log("id: " + id);
 	if(price == ""){
-		console.log("special price: " + special_price);
 		price = special_price;
 	}
-	else
-		console.log("price: " + price);
 
 	var obj = {namee: name, ide: id, pricee: price};
 	var myJSON = JSON.stringify(obj);
 
 	upDateLocalStorage(myJSON);
-	addToBasket();
+	alert("Товар додано у корзину");
 });
 
 /*add product to basket*/
@@ -246,20 +250,15 @@ $(document).on('click', '.detali-product-buy', function(){
 	var price = $this.closest('.detali-product-div').find('.detali-product-price').text();
 	var special_price = $this.closest('.detali-product-div').find('.detali-product-special-price').text();
 
-	console.log("This element in detali-info-div: ");
-	console.log("name: " + name);
-	console.log("id: " + id);
 	if(price == ""){
-		console.log("special price: " + special_price);
 		price = special_price;
 	}
-	else
-		console.log("price: " + price);
 
 	var obj = {namee: name, ide: id, pricee: price};
 	var myJSON = JSON.stringify(obj);
 
 	upDateLocalStorage(myJSON);
+	alert("Товар додано у корзину");
 });
 
 /*update localStorage*/

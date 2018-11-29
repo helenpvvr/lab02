@@ -6374,7 +6374,7 @@ html {
 .categoryList-place {
   margin-top: 20px; }
 
-.category {
+.category, .product-title {
   cursor: pointer; }
 
 .category:hover {
