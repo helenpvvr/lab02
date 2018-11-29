@@ -6333,7 +6333,7 @@ html {
 .product-special-price {
   color: red; }
 
-.product-title, .product-special-price {
+.product-title, .product-special-price, .detali-product-special-price {
   font-weight: bold; }
 
 .product-price:before, .product-old-price:before, .detali-product-price:before, .detali-product-old-price:before {
@@ -6384,7 +6384,8 @@ html {
 
 .detali-product-title {
   display: block;
-  font-size: 30px; }
+  font-size: 30px;
+  font-weight: bold; }
 
 .detali-product-price, .detali-product-old-price, .detali-product-special-price {
   display: block;
