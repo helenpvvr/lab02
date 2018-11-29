@@ -166,7 +166,7 @@ function addToBasket(){
 			product-tobuy-div" data-product-tobuy-id="${arr.ide}">`);
 		$productToBuy.append($(`<span class="product-tobuy-title">`).text(arr.namee));
 		$productToBuy.append($(`<span class="product-tobuy-price">`).text(arr.pricee));
-		$productToBuy.append($(`<span class="product-tobuy-number">`).text("Number of products: " + number));
+		$productToBuy.append($(`<span class="product-tobuy-number">`).text("Кількість: " + number));
 		let $productToBuyButtons = $(`<div class="row col-xs-12 col-sm-12 col-md-12 
 			product-tobuy-div-buttons">`);
 		$productToBuyButtons.append($(`<button class="btn product-tobuy-buttonadd">`).text(" + "));
@@ -325,7 +325,7 @@ $(document).on('click', '#send-info', function(){
         		addToBasket();
         	}
         	else
-        		alert("Сталася помилка! Ви не коректно оформили замовлення");
+        		alert("Сталася помилка! Ви не коректно оформили замовлення. Перевірте введені дані");
     	},
     	error: function(xhr){
 			alert("An error occured: " + xhr.status + " " + xhr.statusText);
